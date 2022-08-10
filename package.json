@@ -1,7 +1,7 @@
 {
-  "name": "@vue/theme",
-  "version": "1.1.0",
-  "description": "The design system for Vue.js.",
+  "name": "vitepress-theme-hbs",
+  "version": "0.0.0",
+  "description": "Vitepress theme.",
   "main": "src/index.ts",
   "exports": {
     ".": "./src/index.ts",
@@ -14,23 +14,20 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vuejs/theme.git"
+    "url": "git+https://github.com/Hongbusi/vitepress-theme-hbs.git"
   },
   "keywords": [
     "vue",
     "design-system"
   ],
-  "author": "Evan You",
+  "author": "Hongbusi",
   "license": "MIT",
-  "homepage": "https://theme.vuejs.org",
+  "homepage": "https://hongbusi.com",
   "bugs": {
-    "url": "https://github.com/vuejs/theme/issues"
+    "url": "https://github.com/Hongbusi/vitepress-theme-hbs/issues"
   },
   "scripts": {
-    "lint": "prettier --check --write --parser typescript \"{__tests__,docs,src,types}/**/*.ts\"",
-    "lint:fail": "prettier --check --parser typescript \"{__tests__,docs,src,types}/**/*.ts\"",
     "type": "tsc --noEmit",
-    "test": "npm run lint && npm run type",
     "dev": "vitepress dev demo",
     "demo-build": "vitepress build demo",
     "serve": "npm run demo-build && vitepress serve demo"
@@ -46,7 +43,6 @@
   "devDependencies": {
     "@types/body-scroll-lock": "^2.6.1",
     "@types/estree": "^0.0.48",
-    "prettier": "^2.4.1",
     "typescript": "~4.3.5",
     "vitepress": "^0.20.9",
     "vue": "^3.2.26"
