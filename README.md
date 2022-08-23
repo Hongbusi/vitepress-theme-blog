@@ -2,6 +2,4 @@
 
 ## License
 
-[MIT](http://opensource.org/licenses/MIT)
-
-Copyright (c) 2022-present Hongbusi
+[MIT](./LICENSE) License © 2022 [Hongbusi](https://github.com/Hongbusi) 
