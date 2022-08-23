@@ -1,4 +1,4 @@
-import { VPTheme } from '@vue/theme'
+import { VPTheme } from 'vitepress-theme-hbs'
 import { h } from 'vue'
 
 // uncomment to test CSS variables override

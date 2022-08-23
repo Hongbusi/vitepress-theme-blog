@@ -6,7 +6,7 @@
  */
 
 // for local-linked development
-const deps = ['@vue/theme', '@vueuse/core', 'body-scroll-lock']
+const deps = ['vitepress-theme-hbs', '@vueuse/core', 'body-scroll-lock']
 
 /**
  * @type {() => Promise<import('vitepress').UserConfig>}

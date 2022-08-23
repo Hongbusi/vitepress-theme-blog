@@ -1,5 +1,5 @@
-const getBase = require('../../src/vitepress/config/baseConfig')
 const path = require('path')
+const getBase = require('../../src/vitepress/config/baseConfig')
 
 /**
  * @type {() => Promise<import('vitepress').UserConfig>}
@@ -16,7 +16,7 @@ module.exports = (async () => {
       },
       resolve: {
         alias: {
-          '@vue/theme': path.join(__dirname, '../../src')
+          'vitepress-theme-hbs': path.join(__dirname, '../../src')
         }
       }
     },
@@ -48,7 +48,7 @@ module.exports = (async () => {
       nav: [
         {
           text: 'Docs',
-          activeMatch: `^/(guide|examples)/`,
+          activeMatch: '^/(guide|examples)/',
           items: [
             {
               items: [
@@ -60,7 +60,7 @@ module.exports = (async () => {
         },
         {
           text: 'API Reference',
-          activeMatch: `^/api/`,
+          activeMatch: '^/api/',
           link: '/api/'
         },
         {
@@ -89,7 +89,7 @@ module.exports = (async () => {
         },
         {
           text: 'Community',
-          activeMatch: `^/community/`,
+          activeMatch: '^/community/',
           items: [
             {
               items: [
