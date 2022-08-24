@@ -18,7 +18,7 @@
   ],
   "exports": {
     ".": "./src/index.ts",
-    "./config": "./src/vitepress/config/baseConfig.js",
+    "./config": "./src/vitepress/config/baseConfig.ts",
     "./highlight": "./src/vitepress/config/highlight.js"
   },
   "main": "src/index.ts",
@@ -35,6 +35,9 @@
     "lint:fix": "eslint . --fix",
     "prepare": "husky install"
   },
+  "dependencies": {
+    "@unocss/reset": "^0.45.12"
+  },
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
@@ -43,6 +46,7 @@
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "typescript": "^4.7.4",
+    "unocss": "^0.45.12",
     "vite": "^3.0.9",
     "vitepress": "^1.0.0-alpha.10",
     "vue": "^3.2.37"
