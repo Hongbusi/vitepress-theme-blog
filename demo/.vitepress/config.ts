@@ -21,9 +21,8 @@ export default defineConfigWithTheme<Config>({
 
   themeConfig: {
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vue' },
-      { icon: 'twitter', link: 'https://twitter.com/vuejs' },
-      { icon: 'discord', link: 'https://discord.com/invite/HBherRA' }
+      { icon: 'github', link: 'https://github.com/Hongbusi' },
+      { icon: 'twitter', link: 'https://twitter.com/Hongbusi' }
     ],
 
     nav: [
