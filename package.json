@@ -29,7 +29,7 @@
   "scripts": {
     "type": "tsc --noEmit",
     "dev": "vitepress dev demo",
-    "demo-build": "vitepress build demo",
+    "build": "vitepress build demo",
     "serve": "npm run demo-build && vitepress serve demo",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",

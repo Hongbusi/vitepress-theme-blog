@@ -1,13 +1,13 @@
 import path from 'path'
-import { defineConfig } from 'vitepress'
+import type { UserConfig } from 'vitepress'
+import { defineConfigWithTheme } from 'vitepress'
 import baseConfig from '../../src/config/baseConfig'
+import type { Config } from '../../src/types/config'
 
-export default defineConfig({
-  ...baseConfig,
+export default defineConfigWithTheme<Config>({
+  extends: baseConfig as UserConfig<Config>,
 
   vite: {
-    ...baseConfig.vite,
-
     resolve: {
       alias: {
         'vitepress-theme-hbs': path.join(__dirname, '../../src')
