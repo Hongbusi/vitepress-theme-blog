@@ -3,8 +3,7 @@ import Nav from './Nav.vue'
 </script>
 
 <template>
-  <div>
-    layout
+  <div class="relative flex w-full min-h-screen">
     <Nav />
   </div>
 </template>

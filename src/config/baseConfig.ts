@@ -1,6 +1,6 @@
 import { defineConfig } from 'vitepress'
 import Unocss from 'unocss/vite'
-import { presetUno } from 'unocss'
+import { presetUno, transformerDirectives, transformerVariantGroup } from 'unocss'
 
 export default defineConfig({
   vite: {
@@ -8,6 +8,11 @@ export default defineConfig({
       Unocss({
         presets: [
           presetUno()
+        ],
+
+        transformers: [
+          transformerDirectives(),
+          transformerVariantGroup()
         ]
       })
     ]
