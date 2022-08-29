@@ -16,7 +16,7 @@ export default defineConfigWithTheme<Config>({
   },
 
   lang: 'zh-CN',
-  title: 'vitepress-theme-hbs',
+  title: 'Hongbusi',
   description: 'Vue.js - The Progressive JavaScript Framework',
 
   themeConfig: {
