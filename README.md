@@ -1,6 +1,5 @@
 # vitepress-theme-hbs
 
-New test.
 
 ## License
 
