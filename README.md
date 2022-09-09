@@ -1,6 +1,6 @@
 # vitepress-theme-hbs
 
-Test update.
+New test.
 
 ## License
 
