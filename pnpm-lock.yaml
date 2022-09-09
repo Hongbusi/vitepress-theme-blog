@@ -4,7 +4,7 @@ specifiers:
   '@commitlint/cli': ^17.0.3
   '@commitlint/config-conventional': ^17.0.3
   '@hongbusi/eslint-config': ^0.3.4
-  '@hongbusi/icons-vue': ^0.0.3
+  '@hongbusi/icons-vue': 0.0.4
   '@unocss/reset': ^0.45.12
   eslint: ^8.22.0
   husky: ^8.0.1
@@ -16,7 +16,7 @@ specifiers:
   vue: ^3.2.37
 
 dependencies:
-  '@hongbusi/icons-vue': 0.0.3_vue@3.2.37
+  '@hongbusi/icons-vue': 0.0.4_vue@3.2.37
   '@unocss/reset': 0.45.12
 
 devDependencies:
@@ -534,8 +534,8 @@ packages:
       - typescript
     dev: true
 
-  /@hongbusi/icons-vue/0.0.3_vue@3.2.37:
-    resolution: {integrity: sha512-VKhT0nD7LwmZGgztbXpgD9rxk+cyvsv22bUJwjkPUAZwDnYmncTs9OVnaF1zNg7+RFeWfBXoB68Y67GCybaNbw==}
+  /@hongbusi/icons-vue/0.0.4_vue@3.2.37:
+    resolution: {integrity: sha512-xV1grvKayDkgRrgwWGaWh6qgs6xdJ2CYCTgsF4h5a5z+StOcAtcq0KEXUjhYRczxboJc33QznM85S5SHmIdZsQ==}
     peerDependencies:
       vue: ^3.2.0
     dependencies:

@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import ExternalLink from './icons/ExternalLink.vue'
+import { ExternalLink } from '@hongbusi/icons-vue'
+import Icon from './Icon.vue'
 
 defineProps<{
   href: string
@@ -23,6 +24,8 @@ const isActive = false
       <slot />
     </span>
 
-    <ExternalLink />
+    <Icon>
+      <ExternalLink />
+    </Icon>
   </a>
 </template>
