@@ -20,23 +20,36 @@ export default defineConfigWithTheme<Config>({
   description: 'Vue.js - The Progressive JavaScript Framework',
 
   themeConfig: {
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/Hongbusi' },
-      { icon: 'twitter', link: 'https://twitter.com/Hongbusi' }
-    ],
-
     nav: [
       {
         text: 'Docs',
+        icon: 'Twitter',
         link: '/docs/'
       },
       {
         text: 'API Reference',
+        icon: 'twitter',
         link: '/api/'
       },
       {
         text: 'Sponsor',
+        icon: 'twitter',
         link: '/sponsor/'
+      },
+      {
+        text: 'Online',
+        items: [
+          {
+            text: 'Twitter',
+            icon: 'twitter',
+            link: 'https://twitter.com/Hongbusi'
+          },
+          {
+            text: 'GitHub',
+            icon: 'github',
+            link: 'https://github.com/Hongbusi'
+          }
+        ]
       }
     ]
   }

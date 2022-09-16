@@ -1,11 +1,19 @@
-import type { MenuItem } from './menu'
-import type { SocialLink } from './socialLink'
+export interface NavItemWithLink {
+  text: string
+  icon?: string
+  link: string
+}
 
-export type NavItem = MenuItem
+export interface NavItemWithChildren {
+  text: string
+  items: NavItemWithLink[]
+}
+
+export type NavItem = NavItemWithLink | NavItemWithChildren
 
 export interface SidebarGroup {
   text: string
-  items: MenuItem[]
+  items: NavItemWithLink[]
 }
 
 export interface SidebarConfig {
@@ -19,12 +27,6 @@ export interface Config {
    * @default true
    */
   appearance?: boolean
-
-  /**
-   * The social links to be displayed at the end of the nav bar. Perfect for
-   * placing links to social services such as GitHub, Twitter, Facebook, etc.
-   */
-  socialLinks?: SocialLink[]
 
   /**
    * The nav items.
