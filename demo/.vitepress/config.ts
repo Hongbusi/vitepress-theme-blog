@@ -51,6 +51,15 @@ export default defineConfigWithTheme<Config>({
           }
         ]
       }
-    ]
+    ],
+
+    sidebar: {
+      '/docs/': [
+        { text: 'Docs1', link: '/docs/1/' },
+        { text: 'Docs2', link: '/docs/2/' },
+        { text: 'Docs3', link: '/docs/3/' },
+        { text: 'Docs4', link: '/docs/4/' }
+      ]
+    }
   }
 })
