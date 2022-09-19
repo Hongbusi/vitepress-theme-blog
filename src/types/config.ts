@@ -11,13 +11,8 @@ export interface NavItemWithChildren {
 
 export type NavItem = NavItemWithLink | NavItemWithChildren
 
-export interface SidebarGroup {
-  text: string
-  items: NavItemWithLink[]
-}
-
 export interface SidebarConfig {
-  [path: string]: SidebarGroup[]
+  [path: string]: NavItemWithLink[]
 }
 
 export interface Config {
