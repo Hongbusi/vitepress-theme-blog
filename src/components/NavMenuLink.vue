@@ -1,20 +1,23 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import { ExternalLink, Twitter } from '@hongbusi/icons-vue'
 import Icon from './Icon.vue'
 
-defineProps<{
+const props = defineProps<{
   item: any
 }>()
 
+const EXTERNAL_URL_RE = /^[a-z]+:/i
+const isExternal = computed(() => props.item.link && EXTERNAL_URL_RE.test(props.item.link))
 const isActive = false
 </script>
 
 <template>
   <div class="flex items-stretch space-x-1">
     <a
-      :href="item.href"
-      target="undefined"
-      rel="undefined"
+      :href="item.link"
+      :target="isExternal ? '_blank' : undefined"
+      :rel="isExternal ? 'noreferrer' : undefined"
       class="flex flex-1 items-center space-x-3 rounded-md px-2 py-1.5 text-sm font-medium cursor-pointer"
       :class="isActive ? 'text-white bg-gray-700' : 'text-gray-200 hover:bg-gray-700'"
     >
@@ -26,7 +29,7 @@ const isActive = false
         {{ item.text }}
       </span>
 
-      <Icon color="#fff">
+      <Icon v-if="isExternal" color="#fff">
         <ExternalLink />
       </Icon>
     </a>
