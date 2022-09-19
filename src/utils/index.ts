@@ -29,3 +29,18 @@ export function isActive(currentPath: string, matchPath?: string, asRegex = fals
 export function normalize(path: string): string {
   return decodeURI(path).replace(HASH_RE, '').replace(EXT_RE, '')
 }
+
+export function ensureStartingSlash(path: string): string {
+  return /^\//.test(path) ? path : `/${path}`
+}
+
+export function getSidebar(sidebar: any, path: string) {
+  path = ensureStartingSlash(path)
+
+  for (const dir in sidebar) {
+    if (path.startsWith(ensureStartingSlash(dir)))
+      return sidebar[dir]
+  }
+
+  return []
+}

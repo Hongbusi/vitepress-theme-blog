@@ -1,5 +1,5 @@
 <template>
-  <div class="ml-72">
+  <div>
     <Content />
   </div>
 </template>
