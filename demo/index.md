@@ -2,4 +2,4 @@
 page: true
 ---
 
-# This is a Custom Page
+# This is home page. 
