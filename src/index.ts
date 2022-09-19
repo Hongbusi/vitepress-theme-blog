@@ -6,6 +6,7 @@ import { withConfigProvider } from './composables/config'
 import '@unocss/reset/tailwind.css'
 import 'uno.css'
 import './styles/custom-styles.css'
+import './styles/prose-styles.css'
 
 const HbsTheme: Theme = {
   Layout: withConfigProvider(Layout),
