@@ -6,5 +6,4 @@ export default {
   Layout() {
     return h(HbsTheme.Layout, null, {})
   },
-  NotFound: HbsTheme.NotFound
 }

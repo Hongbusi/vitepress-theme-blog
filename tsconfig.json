@@ -1,17 +1,17 @@
 {
   "compilerOptions": {
+    "jsx": "preserve",
+    "lib": ["ESNext", "DOM"],
     "baseUrl": ".",
     "module": "esnext",
     "moduleResolution": "node",
-    "strict": true,
-    "jsx": "preserve",
-    "esModuleInterop": true,
-    "noUnusedLocals": true,
-    "lib": ["ESNext", "DOM"],
-    "types": ["vite/client"],
     "paths": {
       "vitepress-theme-hbs": ["src/index.ts"]
-    }
+    },
+    "types": ["vite/client"],
+    "strict": true,
+    "noUnusedLocals": true,
+    "esModuleInterop": true
   },
   "include": [
     "src",

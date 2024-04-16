@@ -1,7 +1,8 @@
 {
   "name": "vitepress-theme-hbs",
+  "type": "module",
   "version": "0.0.0",
-  "description": "Vitepress theme.",
+  "description": "Vitepress blog theme.",
   "author": "Hongbusi",
   "license": "MIT",
   "homepage": "https://hongbusi.com",
@@ -13,8 +14,9 @@
     "url": "https://github.com/Hongbusi/vitepress-theme-hbs/issues"
   },
   "keywords": [
-    "vue",
-    "design-system"
+    "vitepress",
+    "theme",
+    "vue"
   ],
   "exports": {
     ".": "./src/index.ts",
@@ -22,37 +24,22 @@
     "./highlight": "./src/vitepress/config/highlight.js"
   },
   "main": "src/index.ts",
-  "files": [
-    "src",
-    "types"
-  ],
   "scripts": {
-    "type": "tsc --noEmit",
     "dev": "vitepress dev demo",
     "build": "vitepress build demo",
-    "serve": "npm run demo-build && vitepress serve demo",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "prepare": "husky install"
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "@hongbusi/icons-vue": "0.0.5",
-    "@unocss/reset": "^0.45.12"
+    "@unocss/reset": "^0.59.3"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.0.3",
-    "@commitlint/config-conventional": "^17.0.3",
-    "@hongbusi/eslint-config": "^0.3.4",
-    "eslint": "^8.22.0",
-    "husky": "^8.0.1",
-    "lint-staged": "^13.0.3",
-    "typescript": "^4.7.4",
-    "unocss": "^0.45.12",
-    "vite": "^3.0.9",
-    "vitepress": "^1.0.0-alpha.10",
-    "vue": "^3.2.37"
-  },
-  "lint-staged": {
-    "*.{vue,js,jsx,ts,tsx,json,md}": "eslint --fix"
+    "@antfu/eslint-config": "^2.14.0",
+    "eslint": "^9.0.0",
+    "typescript": "^5.4.5",
+    "unocss": "^0.59.3",
+    "vite": "^5.2.9",
+    "vitepress": "^1.1.0",
+    "vue": "^3.4.22"
   }
 }
