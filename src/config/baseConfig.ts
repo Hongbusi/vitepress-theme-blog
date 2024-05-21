@@ -6,6 +6,9 @@ export default defineConfig({
   vite: {
     plugins: [
       Unocss({
+        shortcuts: {
+          'card-base': 'overflow-hidden rounded transition',
+        },
         presets: [
           presetUno(),
         ],

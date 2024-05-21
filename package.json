@@ -1,8 +1,8 @@
 {
-  "name": "vitepress-theme-hbs",
+  "name": "vitepress-theme-blog",
   "type": "module",
-  "version": "0.0.0",
-  "description": "Vitepress blog theme.",
+  "version": "0.0.1",
+  "description": "A vitepress theme for blogs.",
   "author": "Hongbusi",
   "license": "MIT",
   "homepage": "https://hongbusi.com",
@@ -16,6 +16,7 @@
   "keywords": [
     "vitepress",
     "theme",
+    "blog",
     "vue"
   ],
   "exports": {
@@ -31,15 +32,15 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "@unocss/reset": "^0.59.3"
+    "@unocss/reset": "^0.60.3"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.14.0",
-    "eslint": "^9.0.0",
+    "@antfu/eslint-config": "^2.18.1",
+    "eslint": "^9.3.0",
     "typescript": "^5.4.5",
-    "unocss": "^0.59.3",
-    "vite": "^5.2.9",
-    "vitepress": "^1.1.0",
-    "vue": "^3.4.22"
+    "unocss": "^0.60.3",
+    "vite": "^5.2.11",
+    "vitepress": "^1.2.2",
+    "vue": "^3.4.27"
   }
 }
