@@ -5,9 +5,6 @@
     "baseUrl": ".",
     "module": "esnext",
     "moduleResolution": "node",
-    "paths": {
-      "vitepress-theme-hbs": ["src/index.ts"]
-    },
     "types": ["vite/client"],
     "strict": true,
     "noUnusedLocals": true,
@@ -15,8 +12,7 @@
   },
   "include": [
     "src",
-    "types",
-    "demo/.vitepress/theme"
+    "types"
   ],
   "exclude": ["node_modules"]
 }

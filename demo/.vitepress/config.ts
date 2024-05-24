@@ -1,5 +1,5 @@
 import { defineConfigWithTheme } from 'vitepress'
-import baseConfig from '../../src/config/baseConfig'
+import { baseConfig } from 'vitepress-theme-blog'
 
 export default defineConfigWithTheme({
   extends: baseConfig,

@@ -1,9 +1,9 @@
-import { HbsTheme } from 'vitepress-theme-hbs'
+import { BlogTheme } from 'vitepress-theme-blog'
 import { h } from 'vue'
 
 export default {
-  ...HbsTheme,
+  ...BlogTheme,
   Layout() {
-    return h(HbsTheme.Layout, null, {})
+    return h(BlogTheme.Layout, null, {})
   },
 }
