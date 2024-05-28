@@ -21,7 +21,7 @@
   ],
   "exports": {
     ".": "./src/index.ts",
-    "./config": "./src/config/baseConfig.ts"
+    "./config": "./src/config/baseConfig.js"
   },
   "main": "src/index.ts",
   "scripts": {},

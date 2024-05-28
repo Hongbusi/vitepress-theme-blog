@@ -1,4 +1,4 @@
-# vitepress-theme-hbs
+# vitepress-theme-blog
 
 ## License
 
