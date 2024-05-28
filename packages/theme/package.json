@@ -1,0 +1,38 @@
+{
+  "name": "vitepress-theme-blog",
+  "type": "module",
+  "version": "0.0.0",
+  "description": "A vitepress theme for blogs.",
+  "author": "Hongbusi",
+  "license": "MIT",
+  "homepage": "https://hongbusi.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hongbusi/vitepress-theme-hbs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Hongbusi/vitepress-theme-hbs/issues"
+  },
+  "keywords": [
+    "vitepress",
+    "theme",
+    "blog",
+    "vue"
+  ],
+  "exports": {
+    ".": "./src/index.ts",
+    "./config": "./src/config/baseConfig.js"
+  },
+  "main": "src/index.ts",
+  "scripts": {},
+  "dependencies": {
+    "@unocss/reset": "^0.60.3"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5",
+    "unocss": "^0.60.3",
+    "vite": "^5.2.11",
+    "vitepress": "^1.2.2",
+    "vue": "^3.4.27"
+  }
+}
