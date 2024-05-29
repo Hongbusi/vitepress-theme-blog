@@ -20,8 +20,14 @@
     "vue"
   ],
   "exports": {
-    ".": "./src/index.ts",
-    "./config": "./src/config/baseConfig.js"
+    ".": {
+      "types": "./theme.d.ts",
+      "default": "./src/index.ts"
+    },
+    "./config": {
+      "types": "./src/config/baseConfig.d.ts",
+      "default": "./src/config/baseConfig.js"
+    }
   },
   "main": "src/index.ts",
   "scripts": {},

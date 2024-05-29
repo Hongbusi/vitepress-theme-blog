@@ -3,8 +3,8 @@ node_modules
 node_cache
 
 dist
-demo/.vuepress/cache
-demo/.vuepress/.temp
+demo/.vitepress/cache
+demo/.vitepress/.temp
 package-lock.json
 yarn.lock
 

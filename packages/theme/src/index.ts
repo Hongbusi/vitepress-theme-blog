@@ -1,13 +1,12 @@
 import type { Theme } from 'vitepress'
 import '@unocss/reset/tailwind.css'
 import 'uno.css'
-import './styles/index.css'
-import Layout from './components/Layout.vue'
 
-const BlogTheme: Theme = {
+import './styles/index.css'
+import Layout from './Layout.vue'
+
+const theme: Theme = {
   Layout,
 }
 
-export {
-  BlogTheme,
-}
+export default theme
