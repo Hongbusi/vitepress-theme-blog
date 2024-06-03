@@ -1,5 +1,3 @@
 ---
-page: true
+layout: home
 ---
-
-# This is home page.
