@@ -9,6 +9,7 @@ import { URL, fileURLToPath } from 'node:url'
 import { defineConfig } from 'vitepress'
 import Unocss from 'unocss/vite'
 import { presetUno, transformerDirectives, transformerVariantGroup } from 'unocss'
+import { getArticles } from './theme.js'
 
 // for local-linked development
 const deps = ['vitepress-theme-blog']
@@ -67,6 +68,9 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/Hongbusi' },
       { icon: 'twitter', link: 'https://x.com/Hongbusi' },
     ],
+    blog: {
+      posts: getArticles(),
+    },
     footer: {
       message: 'Released under the MIT License.',
       copyright: 'Copyright © 2021-present Hongbusi',

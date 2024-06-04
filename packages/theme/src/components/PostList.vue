@@ -1,20 +1,28 @@
+<script setup lang="ts">
+import { useData } from 'vitepress'
+
+const { theme } = useData()
+
+const posts = theme.value?.blog?.posts || []
+</script>
+
 <template>
-  <article v-for="(item, index) in 10" :key="index" class="base-card space-y-2">
+  <article v-for="(post, index) in posts" :key="index" class="base-card space-y-2">
     <h2 class="text-lg font-bold">
-      这是一个文章标题啊
+      {{ post.meta.title }}
     </h2>
     <div class="flex space-x-2">
       <div>
-        2024-1-1
+        {{ posts.meta?.published || '' }}
       </div>
       <div>
-        分类：test
+        分类：{{ post.meta.category }}
       </div>
       <div>
-        标签：1234
+        标签：{{ post.meta.tags.join(', ') }}
       </div>
     </div>
-    <p>这是一个文章描述啊。</p>
+    <p>{{ post.description }}</p>
     <div class="flex space-x-2">
       <div>
         400个字
