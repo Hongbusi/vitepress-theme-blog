@@ -37,10 +37,47 @@ export function useBlogConfig() {
   return inject(configSymbol)!.value.blog!
 }
 
+export function useDarkTransitionConfig() {
+  return inject(configSymbol)!.value.blog?.darkTransition ?? true
+}
+
 export function useArticles() {
   const blogConfig = useConfig()
-  const articles = computed(() => blogConfig.config?.blog?.pagesData || [])
+  const articles = computed(() => {
+    const articles = blogConfig.config?.blog?.pagesData || []
+    return articles.filter(article => !article.meta?.draft)
+  })
   return articles
+}
+
+export function useCategories() {
+  const articles = useArticles()
+  const categories = computed(() => {
+    const categories = new Set<string>()
+    articles.value.forEach((article) => {
+      if (article.meta?.category) {
+        categories.add(article.meta?.category)
+      }
+    })
+    return Array.from(categories)
+  })
+  return categories
+}
+
+export function useTags() {
+  const articles = useArticles()
+  const tags = computed(() => {
+    const tags = new Set<string>()
+    articles.value.forEach((article) => {
+      if (article.meta?.tags) {
+        article.meta.tags.forEach((tag) => {
+          tags.add(tag)
+        })
+      }
+    })
+    return Array.from(tags)
+  })
+  return tags
 }
 
 export function useCurrentPageNum() {

@@ -1,51 +1,26 @@
 <script setup lang="ts">
-import { useData } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
-import { nextTick, provide } from 'vue'
+
+import { useDarkTransition } from './hooks/useDarkTransition'
+import HomePage from './components/HomePage.vue'
+import Footer from './components/Footer.vue'
 
 const { Layout } = DefaultTheme
 
-const { isDark } = useData()
-
-function enableTransitions() {
-  return 'startViewTransition' in document
-    && window.matchMedia('(prefers-reduced-motion: no-preference)').matches
-}
-
-provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
-  if (!enableTransitions()) {
-    isDark.value = !isDark.value
-    return
-  }
-
-  const clipPath = [
-    `circle(0px at ${x}px ${y}px)`,
-    `circle(${Math.hypot(
-      Math.max(x, innerWidth - x),
-      Math.max(y, innerHeight - y),
-    )}px at ${x}px ${y}px)`,
-  ]
-
-  // eslint-disable-next-line ts/ban-ts-comment
-  // @ts-expect-error
-  await document.startViewTransition(async () => {
-    isDark.value = !isDark.value
-    await nextTick()
-  }).ready
-
-  document.documentElement.animate(
-    { clipPath: isDark.value ? clipPath.reverse() : clipPath },
-    {
-      duration: 300,
-      easing: 'ease-in',
-      pseudoElement: `::view-transition-${isDark.value ? 'old' : 'new'}(root)`,
-    },
-  )
-})
+useDarkTransition()
 </script>
 
 <template>
   <Layout>
-    test
+    <template #home-hero-before>
+      <slot name="home-hero-before" />
+      <div class="home">
+        <HomePage />
+      </div>
+    </template>
+    <template #layout-bottom>
+      <Footer />
+      <slot name="layout-bottom" />
+    </template>
   </Layout>
 </template>

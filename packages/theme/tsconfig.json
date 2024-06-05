@@ -5,6 +5,7 @@
     "baseUrl": ".",
     "module": "esnext",
     "moduleResolution": "node",
+    "resolveJsonModule": true,
     "types": ["vite/client"],
     "strict": true,
     "noUnusedLocals": true,

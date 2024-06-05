@@ -82,6 +82,12 @@ export namespace Theme {
      * @default true
      */
     backToTop?: boolean | BackToTop
+    /**
+     * 是否开启深色模式过渡动画
+     * @reference https://vitepress.dev/zh/guide/extending-default-theme#on-appearance-toggle
+     * @default true
+     */
+    darkTransition?: boolean
   }
 
   export interface Config extends DefaultTheme.Config {
