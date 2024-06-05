@@ -5,12 +5,15 @@
   "private": true,
   "scripts": {
     "dev": "pnpm --filter demo run dev",
+    "build": "pnpm --filter vitepress-theme-blog run build",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.18.1",
+    "@types/node": "^20.14.1",
     "eslint": "^9.3.0",
+    "tsup": "^8.1.0",
     "typescript": "^5.4.5"
   }
 }

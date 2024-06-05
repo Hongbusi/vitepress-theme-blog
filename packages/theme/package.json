@@ -21,18 +21,25 @@
   ],
   "exports": {
     ".": {
-      "types": "./theme.d.ts",
+      "types": "./types/theme.d.ts",
       "default": "./src/index.ts"
     },
-    "./config": {
-      "types": "./src/config/baseConfig.d.ts",
-      "default": "./src/config/baseConfig.js"
-    }
+    "./node": {
+      "types": "./node.d.ts",
+      "default": "./node.js"
+    },
+    "./package.json": "./package.json"
   },
   "main": "src/index.ts",
-  "scripts": {},
+  "scripts": {
+    "dev": "tsup",
+    "build": "tsup"
+  },
   "dependencies": {
-    "@unocss/reset": "^0.60.3"
+    "@unocss/reset": "^0.60.3",
+    "dayjs": "^1.11.11",
+    "fast-glob": "^3.3.2",
+    "gray-matter": "^4.0.3"
   },
   "devDependencies": {
     "typescript": "^5.4.5",
