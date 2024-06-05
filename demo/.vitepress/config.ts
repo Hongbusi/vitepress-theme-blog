@@ -1,10 +1,39 @@
-import { defineConfigWithTheme } from 'vitepress'
-import baseConfig from 'vitepress-theme-blog/config'
+import { defineConfig } from 'vitepress'
+import { getThemeConfig } from 'vitepress-theme-blog/node'
 
-export default defineConfigWithTheme({
-  extends: baseConfig,
+const themeConfig = getThemeConfig({
+  footer: {
+    version: true,
+    copyright: {
+      text: 'Copyright © 2021 - 2024 Hongbusi',
+    },
+    icpRecord: {
+      text: '浙ICP备2022017304号',
+      link: 'https://beian.miit.gov.cn',
+    },
+  },
+})
+
+export default defineConfig({
+  extends: themeConfig,
 
   lang: 'zh-CN',
   title: 'Vitepress Theme Blog Demo',
   description: 'A vitepress theme for blogs.',
+
+  themeConfig: {
+    search: {
+      provider: 'local',
+    },
+    nav: [
+      { text: '首页', link: '/' },
+      { text: '标签', link: '/tags' },
+      { text: '分类', link: '/categories' },
+      { text: '友链', link: '/friends' },
+    ],
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/Hongbusi' },
+      { icon: 'twitter', link: 'https://x.com/Hongbusi' },
+    ],
+  },
 })
