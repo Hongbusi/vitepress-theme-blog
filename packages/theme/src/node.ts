@@ -11,7 +11,9 @@ export function getThemeConfig(config?: Partial<Theme.BlogConfig>) {
   // 文章数据
   const pagesData = getArticles(config)
 
-  const extraConfig: any = {}
+  const extraConfig: any = {
+    cleanUrls: true,
+  }
 
   // 获取要加载的 vite 插件
   const vitePlugins = getVitePlugins()

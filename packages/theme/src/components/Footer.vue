@@ -51,7 +51,7 @@ const hasVersionAndIcpRecord = computed(() => {
 </script>
 
 <template>
-  <footer v-if="showFooter" class="pt-8 px-4 pb-16 bg-base flex flex-col items-center">
+  <footer v-if="showFooter" class="pt-8 px-4 pb-16 bg-base flex flex-col items-center text-sm opacity-75">
     <FooterLink v-if="footerData.copyright" :data="footerData.copyright" />
     <div class="flex space-x-2">
       <FooterLink v-if="footerData.version" :data="footerData.version" />
