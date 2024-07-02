@@ -19,7 +19,7 @@ const footerData = computed(() => {
   if (version !== false) {
     data.version = {
       text: `Powered by vitepress-theme-blog@${packageJSON.version}`,
-      link: 'https://theme.hongbusi.com',
+      link: 'https://github.com/Hongbusi/vitepress-theme-blog',
     }
   }
 
@@ -53,9 +53,9 @@ const hasVersionAndIcpRecord = computed(() => {
 <template>
   <footer v-if="showFooter" class="pt-8 px-4 pb-16 bg-base flex flex-col items-center text-sm opacity-75">
     <FooterLink v-if="footerData.copyright" :data="footerData.copyright" />
-    <div class="flex space-x-2">
+    <div md="flex space-x-2">
       <FooterLink v-if="footerData.version" :data="footerData.version" />
-      <p v-if="hasVersionAndIcpRecord">
+      <p v-if="hasVersionAndIcpRecord" class="hidden md:block">
         ·
       </p>
       <FooterLink v-if="footerData.icpRecord" :data="footerData.icpRecord" />

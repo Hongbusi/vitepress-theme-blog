@@ -5,7 +5,7 @@ defineProps<{
 </script>
 
 <template>
-  <p>
+  <p class="text-center">
     <a
       v-if="data.link"
       :href="data.link"
