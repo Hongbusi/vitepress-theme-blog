@@ -2,6 +2,8 @@ import { defineConfig } from 'vitepress'
 import { getThemeConfig } from 'vitepress-theme-blog/node'
 
 const themeConfig = getThemeConfig({
+  author: '洪布斯',
+  signature: '知道的越多，不知道的越多。',
   footer: {
     version: true,
     copyright: {

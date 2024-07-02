@@ -1,15 +1,29 @@
 <script setup lang="ts">
+import dayjs from 'dayjs'
 import { computed } from 'vue'
 
-import { useArticles, useCategories, useTags } from '../../composables/config/blog'
+import { useArticles, useBlogConfig } from '../../composables/config/blog'
 
+const blogConfig = useBlogConfig()
 const articles = useArticles()
-const categories = useCategories()
-const tags = useTags()
 
 const articleCount = computed(() => articles.value.length)
-const categoriesCount = computed(() => categories.value.length)
-const tagsCount = computed(() => tags.value.length)
+
+const now = dayjs()
+
+const yearUpdateCount = computed(() => {
+  return articles.value.filter((article) => {
+    const date = dayjs(article.meta.published)
+    return date.isSame(now, 'year')
+  }).length
+})
+
+const monthUpdateCount = computed(() => {
+  return articles.value.filter((article) => {
+    const date = dayjs(article.meta.published)
+    return date.isSame(now, 'month')
+  }).length
+})
 </script>
 
 <template>
@@ -23,25 +37,21 @@ const tagsCount = computed(() => tags.value.length)
       >
     </div>
     <h2 class="text-2xl font-bold">
-      Hongbusi
+      {{ blogConfig?.author || 'vitepress-theme-blog' }}
     </h2>
-    <div>知道的越多，不知道的越多。</div>
-    <ul class="grid grid-cols-4 gap-2 w-full">
+    <div>{{ blogConfig?.signature || '知道的越多，不知道的越多' }}</div>
+    <ul class="grid grid-cols-3 gap-2 w-full">
       <li class="flex flex-col items-center">
-        <span class="text-2xl">{{ articleCount }}</span>
-        <span>文章</span>
+        <span class="text-xl">{{ articleCount }}</span>
+        <span class="opacity-70 text-sm">文章</span>
       </li>
       <li class="flex flex-col items-center">
-        <span class="text-2xl">{{ categoriesCount }}</span>
-        <span>分类</span>
+        <span class="text-xl">+{{ yearUpdateCount }}</span>
+        <span class="opacity-70 text-sm">今年更新</span>
       </li>
       <li class="flex flex-col items-center">
-        <span class="text-2xl">{{ tagsCount }}</span>
-        <span>标签</span>
-      </li>
-      <li class="flex flex-col items-center">
-        <span class="text-2xl">28</span>
-        <span>万字</span>
+        <span class="text-xl">+{{ monthUpdateCount }}</span>
+        <span class="opacity-70 text-sm">本月更新</span>
       </li>
     </ul>
   </div>

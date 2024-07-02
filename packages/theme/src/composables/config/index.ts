@@ -66,6 +66,7 @@ export namespace Theme {
   export interface BlogConfig {
     srcDir?: string
     author?: string
+    signature?: string
     pagesData: PageData[]
 
     /**

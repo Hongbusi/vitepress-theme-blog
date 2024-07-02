@@ -14,7 +14,7 @@ const posts = useArticles()
           {{ post.meta.title }}
         </h2>
       </a>
-      <div class="flex space-x-2 text-sm opacity-75">
+      <div class="flex flex-wrap space-x-2 text-sm opacity-75">
         <div class="flex items-center space-x-1">
           <ClockIcon class="size-4" />
           <time> {{ post.meta?.published || '' }}</time>

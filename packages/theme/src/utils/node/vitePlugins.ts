@@ -1,5 +1,10 @@
 import Unocss from 'unocss/vite'
-import { presetUno, transformerDirectives, transformerVariantGroup } from 'unocss'
+import {
+  presetAttributify,
+  presetUno,
+  transformerDirectives,
+  transformerVariantGroup,
+} from 'unocss'
 
 export function getVitePlugins() {
   const plugins: any[] = []
@@ -23,6 +28,7 @@ export function unocssPlugin() {
     },
     presets: [
       presetUno(),
+      presetAttributify(),
     ],
     transformers: [
       transformerDirectives(),
