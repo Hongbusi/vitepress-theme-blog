@@ -1,7 +1,7 @@
 {
   "name": "vitepress-theme-blog-monorepo",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.0.2",
   "private": true,
   "scripts": {
     "dev": "pnpm --filter demo run dev",
