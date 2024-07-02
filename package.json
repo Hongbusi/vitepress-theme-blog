@@ -6,12 +6,14 @@
   "scripts": {
     "dev": "pnpm --filter demo run dev",
     "build": "pnpm --filter vitepress-theme-blog run build",
+    "release": "bumpp package.json packages/**/package.json",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.20.0",
     "@types/node": "^20.14.2",
+    "bumpp": "^9.4.1",
     "eslint": "^9.4.0",
     "tsup": "^8.1.0",
     "typescript": "^5.4.5"
