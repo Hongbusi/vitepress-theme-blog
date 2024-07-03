@@ -1,7 +1,7 @@
 {
   "name": "vitepress-theme-blog",
   "type": "module",
-  "version": "0.0.2",
+  "version": "0.0.3-beta.1",
   "description": "A vitepress theme for blogs.",
   "author": "Hongbusi",
   "license": "MIT",
