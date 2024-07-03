@@ -6,6 +6,6 @@ export default defineConfig({
   outDir: path.resolve(__dirname, './'),
   format: 'esm',
   dts: true,
-  external: ['vitepress', 'unocss'],
+  external: ['vitepress', 'unocss', 'uno.css'],
   silent: true,
 })
